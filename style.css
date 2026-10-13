@@ -75,11 +75,11 @@ ul {
 
 li {
     background-color: #334155;
-    padding: 10px 14px;
+    padding: 12px 14px;
     border-radius: 8px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    gap: 12px;
     word-break: break-all;
 }
 
@@ -88,5 +88,48 @@ li.completed {
     color: #64748B;
     background-color: #1E293B;
     border: 1px dashed #334155;
+}
+
+check-btn {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 2px solid #38BDF8;
+    background-color: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    flex-shrink: 0;
+}
+
+.check-btn:hover {
+    background-color: rgba(56, 189, 248, 0.1);
+}
+
+.task-text {
+    flex: 1;
+}
+
+li.completed {
+    background-color: #1E293B;
+    border: 1px dashed #334155;
+}
+
+li.completed .check-btn {
+    background-color: #38BDF8;
+}
+
+li.completed .check-btn::after {
+    content: "✓";
+    font-size: 12px;
+    font-weight: bold;
+    color: #0F172A;
+}
+
+li.completed .task-text {
+    text-decoration: line-through;
+    color: #64748B;
 }
 
