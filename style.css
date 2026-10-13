@@ -32,10 +32,10 @@ h1 {
 
 .input-group {
     display: flex;
-    text-align: center;
+    gap: 10px;
 }
 
-input [type="text"] {
+input[type="text"] {
     flex: 1;
     background-color: #0F172A;
     border: 1px solid #334155;
@@ -81,5 +81,12 @@ li {
     justify-content: space-between;
     align-items: center;
     word-break: break-all;
+}
+
+li.completed {
+    text-decoration: line-through;
+    color: #64748B;
+    background-color: #1E293B;
+    border: 1px dashed #334155;
 }
 
